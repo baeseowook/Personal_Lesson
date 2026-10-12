@@ -9,7 +9,20 @@ const __dirname = path.dirname(__filename);
 
 export default defineConfig(() => {
   return {
-    plugins: [react(), tailwindcss()],
+    plugins: [
+      react(),
+      tailwindcss(),
+      {
+        name: 'force-close-build',
+        closeBundle() {
+          if (process.env.VERCEL || process.env.CI) {
+            setTimeout(() => {
+              process.exit(0);
+            }, 100);
+          }
+        },
+      },
+    ],
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),
