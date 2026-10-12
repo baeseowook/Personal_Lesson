@@ -1,0 +1,6 @@
+{
+  "name": "일본어 과외 프로필 & 소개서 생성기",
+  "description": "팔로(pallo / 前 컬컴) 및 일본 유학(5년)·과외 경력을 바탕으로 한 신규 과외생 모집 맞춤 소개글 & 프로필 카드 매니저",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
